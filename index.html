@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="H5 购票流程手机样机展示" />
+    <title>H5 手机样机</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <main class="showcase">
+      <h1 class="sr-only">H5 手机页面展示</h1>
+
+      <section class="device-stage" aria-label="手机 H5 交互样机">
+        <div class="stage-aura" aria-hidden="true"></div>
+
+        <div class="phone-display">
+          <div class="phone-scale">
+            <div class="phone" id="phone">
+              <div class="phone-edge" aria-hidden="true"></div>
+              <div class="phone-speaker" aria-hidden="true"></div>
+
+              <div
+                class="phone-screen"
+                id="phoneScreen"
+                tabindex="0"
+                aria-label="H5 页面，可使用鼠标滚轮或触控手动浏览"
+              >
+                <div class="screen-content" id="screenContent">
+                  <img class="h5-image" id="h5Image" alt="" />
+
+                  <nav class="home-nav-hotspots" id="homeNavHotspots" aria-label="首页菜单">
+                    <button type="button" aria-label="购票页面" data-menu="tickets"></button>
+                    <button type="button" aria-label="购物车" data-menu="cart"></button>
+                    <button type="button" aria-label="订单" data-menu="orders"></button>
+                    <button type="button" aria-label="个人登录信息" data-menu="profile"></button>
+                  </nav>
+
+                  <div class="asset-state is-loading" id="assetState" aria-live="polite">
+                    <div class="placeholder-preview" aria-hidden="true">
+                      <span></span><span></span><span></span><span></span>
+                    </div>
+                    <div class="asset-message">
+                      <p id="assetStateTitle">正在载入页面</p>
+                      <code id="assetPath"></code>
+                      <small id="assetHint">替换图片后会自动显示</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="phone-home" aria-hidden="true"></div>
+            </div>
+          </div>
+        </div>
+
+        <p class="current-page" id="pageName" aria-live="polite">首页</p>
+        <div class="page-picker" id="pagePicker" aria-label="选择展示页面"></div>
+      </section>
+    </main>
+  </body>
+</html>
